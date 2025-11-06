@@ -4,7 +4,7 @@
   "description": "crud com php e prisma com potgres",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch app.js"
+    "dev": "node app.js"
   },
   "author": "",
   "license": "ISC",
