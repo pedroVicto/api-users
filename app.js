@@ -1,6 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
 const express = require('express');
-const port = 3333;
+const port = process.env.PORT || 3000;
 const prisma = new PrismaClient();
 
 const app = express();
