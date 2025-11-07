@@ -2,9 +2,15 @@ const { PrismaClient } = require('@prisma/client');
 const express = require('express');
 const port = process.env.PORT || 8080;
 const prisma = new PrismaClient();
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
+
+app.use(cors({
+  origin: '*', // Permite qualquer origem (pode restringir depois)
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 
 // ===================== User Endpoints =====================
 app.get('/users', async (req, res) => {
